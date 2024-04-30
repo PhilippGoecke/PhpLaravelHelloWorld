@@ -19,7 +19,7 @@ RUN composer create-project --prefer-dist laravel/laravel helloworld \
 WORKDIR /app/helloworld
 
 RUN php artisan make:controller HelloController \
-  && sed -i 's/}/  public function index() { return view('hello_index'); }\n}/g' app/Http/Controllers/HelloController.php \
+  && sed -i "s/}/  public function index() { return view('hello_index'); }\n}/g" app/Http/Controllers/HelloController.php \
   && echo "Route::get('/hello', 'App\Http\Controllers\HelloController@index');" >> routes/web.php \
   && php artisan route:list \
   && echo "Hello World!" > resources/views/hello_index.blade.php
