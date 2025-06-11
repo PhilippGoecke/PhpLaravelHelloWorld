@@ -1,4 +1,4 @@
-FROM php:8.2-cli
+FROM docker.io/php:8.4-cli
 
 RUN DEBIAN_FRONTEND=noninteractive apt update && DEBIAN_FRONTEND=noninteractive apt upgrade -y \
   # install dependencies
