@@ -30,4 +30,4 @@ EXPOSE 8080
 
 CMD php artisan serve --host=0.0.0.0 --port=8080
 
-HEALTHCHECK CMD curl -f "http://localhost:8080" || exit 1
+HEALTHCHECK CMD curl -f "http://localhost:8080/up" || exit 1
